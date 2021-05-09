@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20211.21.0420.1112                               -->
+<workbook source-build='2021.1.1 (20211.21.0420.1112)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='city+ (sakila)' inline='true' name='federated.1pyllzm1aqsp611djoivu093gmqi' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='localhost' name='mysql.139ete31afek1417lztsk0tv0kob'>
+            <connection class='mysql' dbname='amazon' odbc-native-protocol='' one-time-sql='' port='3306' server='localhost' source-charset='' username='root' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='mysql.139ete31afek1417lztsk0tv0kob' name='Custom SQL Query' type='text'>select C.categoriesID,primaryCategories,productID,count(*) as product_count from categories c, product p where c.categoriesID=p.categoriesID group by categoriesID</_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='mysql.139ete31afek1417lztsk0tv0kob' name='Custom SQL Query' type='text'>select C.categoriesID,primaryCategories,productID,count(*) as product_count from categories c, product p where c.categoriesID=p.categoriesID group by categoriesID</_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>categoriesID</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[categoriesID]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>categoriesID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[_DFB60CA4121043A2BED5A7BC944F351A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>primaryCategories</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[primaryCategories]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>primaryCategories</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>false</contains-null>
+            <collation charset='296' flag='3' name='LROOT_S1' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WVARCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='TypeIsVarchar'>&quot;true&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[_DFB60CA4121043A2BED5A7BC944F351A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>productID</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[productID]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>productID</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[_DFB60CA4121043A2BED5A7BC944F351A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>product_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[product_count]</local-name>
+            <parent-name>[Custom SQL Query]</parent-name>
+            <remote-alias>product_count</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_BIGINT&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SBIGINT&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[_DFB60CA4121043A2BED5A7BC944F351A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='Custom SQL Query' datatype='table' name='[__tableau_internal_object_id__].[_DFB60CA4121043A2BED5A7BC944F351A]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[reviewsrating]' palette='orange_blue_diverging_10_0' type='interpolated' />
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;China&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Custom SQL Query' id='_DFB60CA4121043A2BED5A7BC944F351A'>
+            <properties context=''>
+              <relation connection='mysql.139ete31afek1417lztsk0tv0kob' name='Custom SQL Query' type='text'>select C.categoriesID,primaryCategories,productID,count(*) as product_count from categories c, product p where c.categoriesID=p.categoriesID group by categoriesID</relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='city+ (sakila)' name='federated.1pyllzm1aqsp611djoivu093gmqi' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1pyllzm1aqsp611djoivu093gmqi'>
+            <column-instance column='[primaryCategories]' derivation='None' name='[none:primaryCategories:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[primaryCategories]' role='dimension' type='nominal' />
+            <column datatype='integer' name='[product_count]' role='measure' type='quantitative' />
+            <column-instance column='[product_count]' derivation='Sum' name='[sum:product_count:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='refline'>
+            <format attr='stroke-color' id='refline0' value='#000000' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.1pyllzm1aqsp611djoivu093gmqi].[none:primaryCategories:nk]' />
+              <wedge-size column='[federated.1pyllzm1aqsp611djoivu093gmqi].[sum:product_count:qk]' />
+              <text column='[federated.1pyllzm1aqsp611djoivu093gmqi].[none:primaryCategories:nk]' />
+              <lod column='[federated.1pyllzm1aqsp611djoivu093gmqi].[sum:product_count:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <mark-labels>
+          <mark-label id='0'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1pyllzm1aqsp611djoivu093gmqi].[none:primaryCategories:nk]</field>
+                  <field>[federated.1pyllzm1aqsp611djoivu093gmqi].[sum:product_count:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Electronics,Media&quot;</value>
+                <value>1</value>
+              </tuple>
+            </tuple-reference>
+            <label-position x='52' y='-33' />
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{A315340A-156C-44BD-AAE7-F4E54EE01FDF}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='37'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1pyllzm1aqsp611djoivu093gmqi].[none:primaryCategories:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{B415DAAB-E009-407B-A76D-7CD14DD6D0F6}' />
+    </window>
+  </windows>
+</workbook>
